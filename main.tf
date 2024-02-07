@@ -2,11 +2,9 @@ provider "aws" {
   region = "us-east-1"
 }
 
-
 resource "aws_s3_bucket" "mybucket1" {
   bucket = "example2k"
 }
-
 resource "aws_s3_bucket_ownership_controls" "sanju" {
   bucket = aws_s3_bucket.mybucket1.id
 
@@ -23,7 +21,6 @@ resource "aws_s3_bucket" "mybucket2" {
 
   }
 }
-
 
 resource "aws_s3_bucket_ownership_controls" "sanjay" {
   bucket = aws_s3_bucket.mybucket2.id
